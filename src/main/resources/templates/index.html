@@ -1,0 +1,73 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>TikapeBot</title>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                padding: 20px;
+                font-family: Helvetica;
+                background-color: #20262e;
+                max-width: 50em;
+                margin: 0 auto;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr, 1fr ;
+                grid-gap: 10px;
+                list-style: none;
+                text-align: center;
+            }
+
+            li {
+                background-color: #fff;
+                border-radius: 3px;
+                padding: 20px;
+                font-size: 1.3em;
+            }
+            
+            h3 {
+                padding-bottom: 30px;
+            }
+            
+            .search {
+                text-align: center;
+                font-size: 1.5em;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                color: #fff;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="search">
+            <form action="/add">
+                <input type="submit" value="En halua käyttää Telegramia :("/>
+            </form>
+            <h3>TikapeBot</h3>
+            <p>Hae sanaan liittyvän stickerin id:</p><br />
+            <form action="/search" method="POST">
+                <input type="text" name="word" />
+                <input type="submit" value="Hae" />
+            </form>
+            <br />
+            <p id="stickerId">Stickerin id: <span th:text="${fileId}"></span></p>
+            <br />
+            <p>Esiintyneet sanat:</p>
+        </div>
+        
+        <ul>
+            <li th:each="word : ${words}">
+                <span th:text="${word}"></span>
+                <form th:action="@{~/delete/{word}(word=${word})}" method="POST">
+                    <input type="submit" value="Poista"/>
+                </form>
+            </li>
+        </ul>
+
+    </body>
+</html>

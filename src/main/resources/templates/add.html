@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>TikapeBot | Lisää</title>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                padding: 20px;
+                font-family: Helvetica;
+                background-color: #20262e;
+                max-width: 50em;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 1.5em;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                color: #fff;
+            }
+
+            h3 {
+                padding-bottom: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h3>TikapeBotin Telegram korvaaja</h3>
+            <p>Voit lisätä sanoja tietokantaan täällä, mutta et voi vaikuttaa stickerin valintaan</p><br />
+            <form action="/addword" method="POST">
+                <p>Sana: </p>
+                <input type="text" name="word" />
+                <input type="submit" value="Lisää" />
+            </form>
+            <br />
+            <br />
+            <form action="/home">
+                <input type="submit" value="Takaisin"/>
+            </form>
+        </div>
+
+    </body>
+</html>
