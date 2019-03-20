@@ -5,12 +5,12 @@ viestin sanaan kyseisen stickerin ja päivittää tämän tietokantaan.
 
 ## Demo
 #### Testaus
-* Avaa selaimella (sovellus käynnistyy): https://tikapebot.herokuapp.com/home
+* Avaa selaimella (sovellus käynnistyy): https://tikapebot.herokuapp.com
 * Etsi Telegramista TikapeBot ja paina START
 * Lähetä TikapeBotille viesti: `github`
 * Lähetä TikapeBotille heti perään uusi viesti: `/sticker`
 #### Opettaminen
-* Avaa selaimella (sovellus käynnistyy): https://tikapebot.herokuapp.com/home
+* Avaa selaimella (sovellus käynnistyy): https://tikapebot.herokuapp.com
 * Etsi Telegramista TikapeBot ja paina START
 * Lähetä TikapeBotille jokin uusi sana
 * Lähetä TikapeBotille heti perään sticker
